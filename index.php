@@ -1,5 +1,5 @@
 <?php
-$session="47906786420%3A8bRnA1MXS1uHkg%3A3"; //buraya cookieeditor'den aldıgınız sessionid'i yazın.
+$session="47718495771%3Am1AonexYCj9Qi7%3A26"; //buraya cookieeditor'den aldıgınız sessionid'i yazın.
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://www.instagram.com/mert/?__a=1'); ////This may differ from site to site
 //curl_setopt($curl, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
