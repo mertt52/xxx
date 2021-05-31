@@ -1,6 +1,5 @@
 <?php
 $nick=$_GET['nick'];
-$yazi="alanadı/username";
 $session="47718495771%3Am1AonexYCj9Qi7%3A26";//buraya cookieeditor'den aldıgınız sessionid'i yazın.
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://www.instagram.com/'.$nick.'/?__a=1'); ////This may differ from site to site
@@ -44,6 +43,5 @@ $marks = array(
 "pp"=>$resim,
 "mavi"=>$mavi,
 "followers"=>$tt,);
-  json_encode($marks);
-echo $yazi;
+  echo json_encode($marks);
 ?>
