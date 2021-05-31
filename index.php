@@ -18,29 +18,20 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 ));
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
- $result = curl_exec($ch);
+$result = curl_exec($ch);
 $json = json_decode($result, true);
 $mavi = $json['graphql']['user']['is_verified'];
 $tt=$json['graphql']['user']['edge_followed_by']['count'];
 $resim = $json['graphql']['user']['profile_pic_url_hd'];
-
-
 $img_file = $resim;
-
-// dosyayı okuma ve base 64 ile encode'leme işlemi
 $imgData = base64_encode(file_get_contents($img_file));
-
-// data:{mime};base64,{data};
+data:{mime};base64,{data};
 $resim = 'data:image/png;base64,'.$imgData;
-
 $bio=$json['graphql']['user']['biography'];
-// An associative array
 $marks = array(
 "bio"=>$bio, 
 "pp"=>$resim,
 "mavi"=>$mavi,
 "followers"=>$tt,);
- 
-echo json_encode($marks);
+json_encode($marks);
 ?>
