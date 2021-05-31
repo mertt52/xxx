@@ -25,7 +25,7 @@ $tt=$json['graphql']['user']['edge_followed_by']['count'];
 $resim = $json['graphql']['user']['profile_pic_url_hd'];
 $img_file = $resim;
 $imgData = base64_encode(file_get_contents($img_file));
-data:{mime};base64,{data};
+//data:{mime};base64,{data};
 $resim = 'data:image/png;base64,'.$imgData;
 $bio=$json['graphql']['user']['biography'];
 $marks = array(
