@@ -32,5 +32,5 @@ $marks = array(
 "pp"=>$resim,
 "mavi"=>$mavi,
 "followers"=>$tt,);
-json_encode($marks);
+echo json_encode($marks);
 ?>
